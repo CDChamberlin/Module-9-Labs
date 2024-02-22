@@ -12,19 +12,27 @@ app.get('/', (req, res) =>{
 })
 
 io.on('connection', (socket) => {
-    io.emit('connection', 'a user connected')
+    //io.emit('connection', 'a user connected')
+    
+    socket.broadcast.emit('connection', "Hello")
+    
+    //io.emit('disconnect', "A user has disconnected")
 
     console.log('SERVER - a user connected')
     
     socket.on('disconnect', () => {
-        io.emit('disconnection', 'A user has disconnected')
-        console.log('user disconnected')
+        socket.broadcast.emit('disconnected', "user disconnected from socket" )
+        console.log('user disconnected afasf ')
     })
 
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg)
     })
 })
+
+// io.on('disconnection', (socket) => {
+//     socket.broadcast.emit("A user disconnected")
+// })
 
 server.listen(3000, () => {
     console.log('listening on *:3000')
