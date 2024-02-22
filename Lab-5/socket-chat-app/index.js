@@ -12,17 +12,13 @@ app.get('/', (req, res) =>{
 })
 
 io.on('connection', (socket) => {
-    //io.emit('connection', 'a user connected')
     
-    socket.broadcast.emit('connection', "Hello")
-    
-    //io.emit('disconnect', "A user has disconnected")
+    socket.broadcast.emit('connection', "A new user joined the chat")
 
     console.log('SERVER - a user connected')
     
     socket.on('disconnect', () => {
-        socket.broadcast.emit('disconnected', "user disconnected from socket" )
-        console.log('user disconnected afasf ')
+        socket.broadcast.emit('disconnected', "A user disconnected from the chat" )
     })
 
     socket.on('chat message', (msg) => {
