@@ -19,7 +19,7 @@ router.post('/create', (req, res) => {
 router.put('/:id', (req, res) => {
     Controllers.userController.updateUser(req, res)
 })
-// Adds a PUT route to update a user 
+// Adds a delete route to delete a user 
 // http://localhost:8080/api/users/<id>
 router.delete('/:id', (req, res) => {
     Controllers.userController.deleteUser(req, res)
