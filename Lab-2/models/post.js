@@ -7,7 +7,11 @@ const postSchema = new Schema({
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
     imageURL: {type: String, required: true},
-    userID: []
+    userID: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 })
 
 module.exports = mongoose.model("post", postSchema)
