@@ -1,11 +1,11 @@
 let express = require('express')
 let router = express.Router()
-let Controllers = require('../controller')
+let Controllers = require('../controllers')
 
 // Adds a GET route to return all users
 // http://localhost:8080/api/users/
 router.get('/', (req, res) =>{
-    Controllers.userController.getUser(res)
+    Controllers.userController.getUsers(res)
 })
 
 // Adds a POST route to create a new user
