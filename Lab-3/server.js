@@ -14,7 +14,7 @@ app.use("/api/comments", commentRoutes);
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to my Module 9, Lab 2: MongoDB Blog Application",
+    message: "Welcome to my Module 9, Lab 3: MySQL Blog Application",
   });
 });
 
