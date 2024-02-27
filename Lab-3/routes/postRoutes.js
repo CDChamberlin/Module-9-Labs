@@ -4,7 +4,7 @@ let Controllers = require('../controllers');
 
 // GET all posts
 router.get('/', (req, res) => {
-    Controllers.postController.getPosts(res);
+    Controllers.postController.getPosts(req,res);
 });
 
 // POST a new post

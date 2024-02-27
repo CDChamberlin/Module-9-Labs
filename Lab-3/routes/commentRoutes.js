@@ -4,7 +4,7 @@ let Controllers = require('../controllers');
 
 // GET all comments
 router.get('/', (req, res) => {
-    Controllers.commentController.getComments(res);
+    Controllers.commentController.getComments(req,res);
 });
 
 // POST a new comment
