@@ -32,7 +32,7 @@ Comment.init(
   },
   {
     sequelize: sequelizeInstance,
-    modelName: "users", // use lowercase plural format
+    modelName: "comments", // use lowercase plural format
     timestamps: true,
     freezeTableName: true,
   }
