@@ -3,7 +3,9 @@ require("dotenv").config();
 
 let dbConnect = require("./dbConnect");
 // Imports routes:
-const { postRoutes, commentRoutes, userRoutes } = require("./routes");
+const userRoutes = require('./routes/userRoutes')
+const postRoutes = require('./routes/postRoutes')
+const commentRoutes = require('./routes/commentRoutes')
 
 const app = express();
 
