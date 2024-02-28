@@ -3,7 +3,9 @@ require("dotenv").config();
 
 let dbConnect = require("./dbConnect");
 // Imports routes:
-const { postRoutes, commentRoutes, userRoutes } = require("./routes");
+const userRoutes = require('./routes/userRoutes')
+const postRoutes = require('./routes/postRoutes')
+const commentRoutes = require('./routes/commentRoutes')
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.use("/api/comments", commentRoutes);
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to my Module 9, Lab 2: MongoDB Blog Application",
+    message: "Welcome to my Module 9, Lab 3: MySQL Blog Application",
   });
 });
 
