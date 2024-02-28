@@ -1,5 +1,5 @@
 # Module-9-Labs
-Labwork for Module 9: API Developement
+Lab work for Module 9: API Development
 
 ## Lab 2: MongoDB Blog Website
 Create an express back-end application for a Blog website using MongoDB. You should refer to your database model from [Module 8]() for this, ensuring that your app matches the model.
